@@ -20,3 +20,66 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.botoesDaLista a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.89);
+  padding: 7px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.Editar{
+  background-color: rgb(110, 85, 134);
+  
+}
+.Editar:hover{
+  background-color: rgb(110, 47, 168);
+}
+
+.Detalhes{
+  background-color: #506d8b;
+}
+.Detalhes:hover{
+  background-color: #197ae0;
+}
+
+.Deletar {
+  background-color: rgb(167, 74, 74);
+}
+.Deletar:hover{
+  background-color: rgb(214, 36, 36);
+}
+
+.cabecalhoLista{
+  background-color: rgba(0, 0, 0, 0.822);
+  color: rgba(255, 255, 255, 0.897);
+ 
+}
+
+.cabecalhoLista .acoes {
+  text-align: center;
+}
+.linhasLista .botoesDaLista{
+  text-align: center;
+}
+
+.btnNovoContato{
+  text-decoration: none;
+  color: #fff;
+  background-color: #197ae0;
+  padding: 7px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.btnNovoContato:hover{
+  background-color: #0b345f;
+  color: #fff;
+}
+
+h2{
+  margin-bottom: 2rem;
+}

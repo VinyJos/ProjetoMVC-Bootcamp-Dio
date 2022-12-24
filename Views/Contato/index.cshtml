@@ -1,0 +1,60 @@
+@model IEnumerable<ProjetoMVC.Models.Contato>
+
+@{
+    ViewData["Title"] = "Listagem de contatos";
+}
+
+<h2>Contatos</h2>
+
+<p>
+    <a asp-action="Criar" class="btnNovoContato">Novo Contato</a>
+</p>
+
+<table class="table">
+    <!-- Cabeçalho-->
+    <thead>
+        <tr class="cabecalhoLista">
+            <th>
+                <!-- Cabeçalho com os nomes da minha coluna -->
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th class="acoes">
+                @Html.DisplayName("Ações")
+            </th>
+        </tr>
+    </thead>
+    <!--Corpo-->
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="linhasLista">
+                <td>
+                    @Html.DisplayFor(model => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Ativo)
+                </td>
+                <td class="botoesDaLista">
+                    <a asp-action="Editar" asp-route-id="item.Id" class="Editar">Editar</a>
+                    <a asp-action="Detalhes" asp-route-id="item.Id" class="Detalhes">Detalhes</a>
+                    <a asp-action="Deletar" asp-route-id="item.Id" class="Deletar">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
