@@ -22,9 +22,9 @@ namespace ProjetoMVC.Controllers
             var contatos = _context.Contatos.ToList();
             return View(contatos);
         }
-        
+
         // aqui ele está como [HttpGet] mas é opcional colocar
-        public IActionResult Criar()
+        public IActionResult Criar()  
         {
             return View();
         }
@@ -41,5 +41,49 @@ namespace ProjetoMVC.Controllers
             }
             return View(contato);
         }
+        // Método da View
+        public IActionResult Editar(int id)
+        {   
+            // Buscar no banco esse contato, para ser editado
+            var contato = _context.Contatos.Find(id);
+            if (contato == null)
+            {   
+                // Redireciona para a página de listagem
+                return RedirectToAction(nameof(Index));
+            }
+            // passar o contato para que ele possa aparecer na tela de edição
+            return View(contato);
+        }
+        
+        // Método para ação de editar.
+        [HttpPost]
+        public IActionResult Editar(Contato contato)
+        {   
+            // buscando no banco
+            var contatoBanco = _context.Contatos.Find(contato.Id);
+
+            // inputs editados
+            contatoBanco.Nome = contato.Nome;
+            contatoBanco.Telefone = contato.Telefone;
+            contatoBanco.Ativo = contato.Ativo;
+
+            // Fazendo o Update
+            _context.Contatos.Update(contatoBanco);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Detalhes(int id)
+        {
+            var contato = _context.Contatos.Find(id);
+
+            if (contato == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return View(contato);
+        }
+
     }
 }

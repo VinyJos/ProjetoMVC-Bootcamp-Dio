@@ -1,6 +1,27 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.row{
+  padding-top: 15px;
+}
+.nav-item {
+  transition: all 0.2s;
+  position: relative;
+}
+.nav-item:hover {
+  /* text-decoration: underline; */
+  /* border-bottom: 2.5px solid white; */
+}
+.nav-item:hover::after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: #70f75e;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -46,3 +67,5 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+

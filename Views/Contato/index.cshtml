@@ -1,5 +1,7 @@
+<!-- Está recebendo uma lista-->
 @model IEnumerable<ProjetoMVC.Models.Contato>
 
+<!--Nome que vai na aba do navegador-->
 @{
     ViewData["Title"] = "Listagem de contatos";
 }
@@ -50,9 +52,9 @@
                     @Html.DisplayFor(model => item.Ativo)
                 </td>
                 <td class="botoesDaLista">
-                    <a asp-action="Editar" asp-route-id="item.Id" class="Editar">Editar</a>
-                    <a asp-action="Detalhes" asp-route-id="item.Id" class="Detalhes">Detalhes</a>
-                    <a asp-action="Deletar" asp-route-id="item.Id" class="Deletar">Deletar</a>
+                    <a asp-action="Editar" asp-route-id="@item.Id" class="Editar">Editar</a>
+                    <a asp-action="Detalhes" asp-route-id="@item.Id" class="Detalhes">Detalhes</a>
+                    <a asp-action="Deletar" asp-route-id="@item.Id" class="Deletar">Deletar</a>
                 </td>
             </tr>
         }
