@@ -84,14 +84,14 @@ h2{
   margin-bottom: 2rem;
 }
 
-.btn{
+.detalhes .btn{
   margin-top: 20%;
 }
 
-.col-sm-2{
+.detalhes .col-sm-2{
   border: 1px solid #c0c0c0;
 }
 
-.col-sm-10{
+.detalhes .col-sm-10{
   border: 1px solid #c0c0c0;
 }

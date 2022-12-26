@@ -16595,6 +16595,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\vinic\\Desktop\\C#_Projetos\\BootcampDio\\.NET\\ASP.NET-MVC\\ProjetoMVC\\Views\\Contato\\Deletar.cshtml",
+      "TargetPath": "Views\\Contato\\Deletar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\vinic\\Desktop\\C#_Projetos\\BootcampDio\\.NET\\ASP.NET-MVC\\ProjetoMVC\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

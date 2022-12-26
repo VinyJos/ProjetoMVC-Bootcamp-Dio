@@ -1,12 +1,12 @@
 @model ProjetoMVC.Models.Contato
 
 @{
-    ViewData["Title"] = "Detalhes do contato";
+    ViewData["Title"] = "Deletar contato";
 }
 
-<h1>Detalhes</h1>
+<h2>Deseja realmente deletar esse contato? Essa operação é irreversível !</h2>
 
-<div class="detalhes">
+<div>
     <!--Definicion list-->
     <dl class="row">
         <dt class="col-sm-2">
@@ -29,5 +29,8 @@
         </dt>
     </dl>
 </div>
-<a asp-action="Editar" asp-route-id="@Model.Id" class="btn btn-danger">Editar</a>
-<a asp-action="Index" class="btn btn-primary">Voltar</a>
+<!-- vai chamar a ação da controller-->
+<form asp-action="Deletar">
+    <input type="submit" value="Deletar" class="btn btn-danger"/>
+    <a asp-action="Index" class="btn btn-primary">Voltar</a>
+</form>
